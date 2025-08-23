@@ -14,6 +14,8 @@
 #define RAISE 2
 #define ADJUST 3
 
+&mmv { time-to-max-speed-ms = <150>; };
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
@@ -39,6 +41,13 @@
             quick-tap-ms = <190>;
             tapping-term-ms = <200>;
         };
+
+        sequencia: sequencia {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SEQUENCIA";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&kp B>, <&kp C>;
+        };
     };
 
     macros {
@@ -47,6 +56,20 @@
             #binding-cells = <0>;
             bindings = <&kp T &kp E &kp S &kp T &kp E>;
             label = "TESTE";
+        };
+
+        nota: nota {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&mmv MOVE_X(500) &mmv MOVE_Y(300)>,
+                <&macro_wait_time 500>,
+                <&mmv MOVE_X(-500)>,
+                <&macro_wait_time 500>,
+                <&mmv MOVE_Y(-300)>,
+                <&macro_press>;
+
+            label = "NOTA";
         };
     };
 
