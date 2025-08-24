@@ -62,12 +62,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&mmv MOVE_X(500) &mmv MOVE_Y(300)>,
+                <&macro_press>,
+                <&mmv MOVE_RIGHT &mmv MOVE_DOWN>,
                 <&macro_wait_time 500>,
-                <&mmv MOVE_X(-500)>,
+                <&macro_release>,
+                <&mmv MOVE_DOWN>,
                 <&macro_wait_time 500>,
-                <&mmv MOVE_Y(-300)>,
-                <&macro_press>;
+                <&macro_release>,
+                <&mmv MOVE_RIGHT>;
 
             label = "NOTA";
         };
