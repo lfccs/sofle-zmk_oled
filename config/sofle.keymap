@@ -87,6 +87,30 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        agudo {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <31 32>;
+        };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <30 31>;
+        };
+
+        til {
+            bindings = <&kp TILDE>;
+            key-positions = <32 33>;
+        };
+
+        circun {
+            bindings = <&kp CARET>;
+            key-positions = <19 20>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
