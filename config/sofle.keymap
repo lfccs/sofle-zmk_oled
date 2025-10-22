@@ -133,8 +133,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LC(TAB) LS(LC(TAB))>,
-                <&inc_dec_kp LA(TAB) LA(LS(TAB))>;
+                <&inc_dec_kp LC(LS(TAB)) LC(TAB)>,
+                <&inc_dec_kp LA(LS(TAB)) LA(TAB)>;
         };
 
         lower_layer {
@@ -181,11 +181,11 @@
 
         nav_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &kp HOME  &kp UP    &kp END    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans    &trans    &trans     &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &kp LCTRL  &trans  &trans    &trans    &trans
+&trans              &trans  &trans  &trans  &trans  &trans                       &trans  &trans    &trans    &trans     &trans  &trans
+&trans              &trans  &trans  &trans  &trans  &trans                       &trans  &kp HOME  &kp UP    &kp END    &trans  &trans
+&kp LC(LEFT_SHIFT)  &trans  &trans  &trans  &trans  &trans                       &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans              &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans    &trans    &trans     &trans  &trans
+                            &trans  &trans  &trans  &trans  &trans    &kp LCTRL  &trans  &trans    &trans    &trans
             >;
         };
 
