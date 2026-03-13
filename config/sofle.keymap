@@ -191,13 +191,12 @@
 
         nav_2 {
             display-name = "nav_2";
-
             bindings = <
-&trans  &trans      &trans      &trans      &trans      &trans                       &trans        &trans        &trans       &trans         &trans  &trans
-&trans  &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(Y)                    &kp PG_UP     &kp HOME      &kp UP       &kp END        &trans  &trans
-&trans  &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &trans                       &kp PG_DN     &kp LEFT      &kp DOWN     &kp RIGHT      &trans  &trans
-&trans  &trans      &trans      &trans      &trans      &trans      &trans    &trans  &kp LC(LEFT)  &kp LC(BSPC)  &kp LC(DEL)  &kp LC(RIGHT)  &trans  &trans
-                    &trans      &trans      &trans      &trans      &trans    &trans  &kp DEL       &trans        &trans       &trans
+&trans  &trans     &trans     &trans     &trans     &trans                       &trans        &trans        &trans       &trans         &trans  &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)                    &kp PG_UP     &kp HOME      &kp UP       &kp END        &trans  &trans
+&trans  &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  &trans                       &kp PG_DN     &kp LEFT      &kp DOWN     &kp RIGHT      &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &trans     &trans    &trans  &kp LC(LEFT)  &kp LC(BSPC)  &kp LC(DEL)  &kp LC(RIGHT)  &trans  &trans
+                   &trans     &trans     &trans     &trans     &trans    &trans  &kp DEL       &trans        &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(Z) LC(Y)>, <&inc_dec_kp UP DOWN>;
@@ -208,7 +207,7 @@
 &kp ESC    &kp N1  &kp N2    &kp N3  &kp N4  &kp N5                            &kp N6    &kp N7     &kp N8     &kp N9   &kp N0  &kp BSPC
 &kp TAB    &kp Q   &kp W     &kp E   &kp R   &kp T                             &kp Y     &kp U      &kp I      &kp O    &kp P   &trans
 &kp LSHFT  &kp A   &kp S     &kp D   &kp F   &kp G                             &kp H     &kp J      &kp K      &kp L    &trans  &trans
-&kp LCTRL  &kp Z   &kp X     &kp C   &kp V   &kp B     &trans       &trans     &kp N     &kp M      &kp COMMA  &kp DOT  &trans  &trans
+&kp LCTRL  &kp Z   &kp X     &kp C   &kp V   &kp B     &kp F19      &kp F20    &kp N     &kp M      &kp COMMA  &kp DOT  &trans  &trans
                    &kp LGUI  &trans  &trans  &kp LALT  &kp SPACE    &kp ENTER  &kp RALT  &kp RCTRL  &trans     &trans
             >;
 
@@ -225,14 +224,16 @@
             //               | MUTE  | VOL-  | STOP  |       |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans      &trans      &trans      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &kp C_PREV  &kp C_VOL_UP  &kp C_NEXT  &kp C_BRI_UP  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &kp C_RW    &kp C_PP      &kp C_FF    &kp C_BRI_DN  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &kp C_MUTE  &kp C_VOL_DN  &kp C_STOP  &trans        &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans      &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans      &trans        &trans      &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp C_PREV  &kp C_VOL_UP  &kp C_NEXT  &kp C_BRI_UP  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp C_RW    &kp C_PP      &kp C_FF    &kp C_BRI_DN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_STOP  &trans        &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>, <&inc_dec_kp C_PREV C_NEXT>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_PREV C_NEXT>;
         };
     };
 };
